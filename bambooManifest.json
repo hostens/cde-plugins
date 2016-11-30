@@ -1,0 +1,61 @@
+{
+	"name":"Atlassian Bamboo",
+	"vendor":"Stefan Hosten",
+	"uniqueId":"ca.cdd.bamboo",
+	"version":"0.1",
+	"relativeUrl": true,
+	"endpointTemplate": {
+		"name":"Atlassian Bamboo",
+		"description":"Endpoint Template for Atlassian Bamboo",
+		"serviceType":"ENDPOINT",
+		"endPointType":"Bamboo endpoint",
+		"uniqueId":"ca.cdd.bamboo.endpoint",
+		"parameters":[
+			{
+				"uniqueId":"ca.cdd.bamboo.endpoint.bambooServer",
+				"name":"bambooServer",
+				"displayName":"Bamboo URL",
+				"type":"string",
+				"isOptional": false,
+				"defaultValue": null,
+				"description": "Some description"
+			},
+			{
+				"uniqueId":"ca.cdd.bamboo.endpoint.username",
+				"name":"username",
+				"displayName":"Bamboo Username",
+				"type":"string",
+				"isOptional":"false",
+				"defaultValue": null,
+				"description":"Bamboo Username"
+			},
+			{
+				"uniqueId":"ca.cdd.bamboo.endpoint.password",
+				"name":"password",
+				"displayName":"Bamboo User Password",
+				"type":"password",
+				"isOptional": false,
+				"defaultValue": null,
+				"description":"Bamboo user's password"
+			}
+		]
+	},
+	"services": [
+		{
+			"name":"Run Bamboo Build",
+			"uniqueId":"ca.cdd.bamboo.task.run_build",
+			"description":"Use this to run a Bamboo Build",
+			"serviceType":"TASK",
+			"url":"rest/api/latest/queue",
+			"parameters": [
+				{
+					"name":"planKey",
+					"uniqueId":"ca.cdd.bamboo.task.run_build.planKey",
+					"displayName":"Bamboo Plan Key",
+					"type":"string",
+					"isOptional": false
+				}
+			]
+		}
+	]
+}
