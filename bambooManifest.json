@@ -3,7 +3,7 @@
 	"vendor":"Stefan Hosten",
 	"uniqueId":"ca.cdd.bamboo",
 	"version":"0.1",
-	"relativeUrl": true,
+	"relativeUrl": false,
 	"endpointTemplate": {
 		"name":"Atlassian Bamboo",
 		"description":"Endpoint Template for Atlassian Bamboo",
