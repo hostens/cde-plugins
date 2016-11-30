@@ -7,6 +7,7 @@
 	"endpointTemplate": {
 		"name":"Atlassian Bamboo",
 		"description":"Endpoint Template for Atlassian Bamboo",
+		"url":"https://hook.io/hostens/runbamboo-build",
 		"serviceType":"ENDPOINT",
 		"endPointType":"Bamboo endpoint",
 		"uniqueId":"ca.cdd.bamboo.endpoint",
